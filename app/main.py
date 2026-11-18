@@ -12,11 +12,12 @@
 
 from __future__ import annotations
 
+import hashlib
 import json
 from pathlib import Path
 
 from fastapi import FastAPI, HTTPException, Query, Request
-from fastapi.responses import FileResponse, JSONResponse, StreamingResponse
+from fastapi.responses import HTMLResponse, JSONResponse, StreamingResponse
 from fastapi.staticfiles import StaticFiles
 
 from . import agent, budget
@@ -52,14 +53,25 @@ def warm() -> None:
     get_index()  # load the index once, so the first visitor does not wait
 
 
+# Cache busting: pages link /static/style.css?v=<hash of the files>, so a browser never keeps an old style after a deploy.
+ASSET_VERSION = hashlib.sha256(b"".join((STATIC / f).read_bytes() for f in ("style.css", "app.js"))).hexdigest()[:10]
+
+
+def page(name: str) -> HTMLResponse:
+    html = (STATIC / name).read_text(encoding="utf-8")
+    html = html.replace("/static/style.css", f"/static/style.css?v={ASSET_VERSION}")
+    html = html.replace("/static/app.js", f"/static/app.js?v={ASSET_VERSION}")
+    return HTMLResponse(html, headers={"Cache-Control": "no-cache"})
+
+
 @app.get("/", include_in_schema=False)
-def home() -> FileResponse:
-    return FileResponse(STATIC / "index.html")
+def home() -> HTMLResponse:
+    return page("index.html")
 
 
 @app.get("/eval", include_in_schema=False)
-def eval_page() -> FileResponse:
-    return FileResponse(STATIC / "eval.html")
+def eval_page() -> HTMLResponse:
+    return page("eval.html")
 
 
 @app.get("/health")
