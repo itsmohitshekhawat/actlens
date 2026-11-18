@@ -90,3 +90,9 @@ footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--m
 footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: space-between; }
 .gh { display: inline-flex; align-items: center; gap: 6px; }
 .gh svg { flex: none; }
+.brandline { display: flex; align-items: baseline; gap: 10px; min-width: 0; }
+.by { color: var(--muted); font-size: 13.5px; white-space: nowrap; }
+nav { display: flex; align-items: center; }
+nav a.ghnav { display: inline-flex; align-items: center; gap: 6px; color: var(--ink); border: 1px solid var(--line); border-radius: 8px; padding: 6px 10px; }
+nav a.ghnav:hover { border-color: var(--muted); }
+@media (max-width: 480px) { .brandline { flex-direction: column; align-items: flex-start; gap: 2px; } .by { font-size: 12px; } nav a.ghnav span { display: none; } }
