@@ -1,0 +1,81 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ActLens: an AI agent for the EU AI Act</title>
+<meta name="description" content="Ask the EU AI Act. An AI agent searches the official text, reads the articles, cites every claim and checks its own citations.">
+<meta property="og:title" content="ActLens: an AI agent for the EU AI Act">
+<meta property="og:description" content="Agentic RAG over the official EU AI Act text, with verified citations, a live agent trace and an MCP server.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Ccircle cx='14' cy='14' r='9' fill='none' stroke='%231d3fb8' stroke-width='3'/%3E%3Cpath d='M21 21l7 7' stroke='%231d3fb8' stroke-width='3' stroke-linecap='round'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/">Act<b>Lens</b></a>
+  <nav><a href="#how" class="hide-sm">How it works</a><a href="#mcp" class="hide-sm">MCP</a><a href="/eval">Evaluation</a><a href="https://github.com/itsmohitshekhawat/actlens">GitHub</a></nav>
+</div></header>
+
+<main>
+<div class="wrap">
+  <div class="hero">
+    <h1>Ask the EU AI Act. Get answers you can check.</h1>
+    <p>An AI agent searches the official text of Regulation (EU) 2024/1689, reads the articles it needs, answers in plain English and cites every claim. Then it checks that each citation points to a passage it actually read.</p>
+  </div>
+  <form class="ask" id="ask">
+    <input id="q" name="q" maxlength="400" autocomplete="off" placeholder="e.g. Can my company use emotion recognition on employees?" aria-label="Your question">
+    <button class="btn" id="go" type="submit">Ask</button>
+  </form>
+  <div class="chips" id="chips"></div>
+  <div class="quota" id="quota"></div>
+
+  <div class="grid">
+    <div class="card">
+      <h2>Answer</h2>
+      <div class="answer" id="answer"><p class="empty">Ask a question or pick an example above. The answer appears here with clickable citations.</p></div>
+      <div id="source"></div>
+      <div class="stats" id="stats"></div>
+    </div>
+    <div class="card">
+      <h2>Agent trace</h2>
+      <ol class="trace" id="trace"><li><span class="found">Each search and each article the agent reads shows up here, live.</span></li></ol>
+    </div>
+  </div>
+</div>
+
+<section class="block" id="how"><div class="wrap">
+  <h3>How it works</h3>
+  <p>Plain retrieval-augmented generation (RAG) searches once and hopes the right passage is in the results. ActLens is agentic: the model decides what to search, reads, searches again with new words if needed, and only then answers.</p>
+  <ol class="steps">
+    <li><b>Official text, split by structure</b>The regulation is parsed into 800 passages: article paragraphs, single definitions, annex parts and recitals, each with its exact citation label.</li>
+    <li><b>Hybrid search</b>Keyword search (BM25) and meaning search (static embeddings) run in parallel and are merged with Reciprocal Rank Fusion. A search takes under a millisecond on a CPU.</li>
+    <li><b>Agent loop with tools</b>DeepSeek calls <code>search_law</code> and <code>read</code> as tools, up to 6 rounds, and writes the answer with a citation after each claim.</li>
+    <li><b>Citation check</b>Every citation is matched against the passages the agent actually retrieved. Anything it did not read is flagged, which catches invented article numbers.</li>
+  </ol>
+</div></section>
+
+<section class="block" id="compare"><div class="wrap">
+  <h3>Compare the search methods</h3>
+  <p>Free and instant: no AI model involved. Keywords catch exact terms, embeddings catch meaning, and the hybrid merges both. Measured results are on the <a href="/eval">evaluation page</a>.</p>
+  <form class="ask" id="cmp"><input id="cq" maxlength="200" value="fines for banned AI" aria-label="Search query"><button class="btn" type="submit">Search</button></form>
+  <div class="cols3" id="cmpres"></div>
+</div></section>
+
+<section class="block" id="mcp"><div class="wrap">
+  <h3>Use it inside your own AI app (MCP)</h3>
+  <p>ActLens is also a Model Context Protocol server. Add this address to Claude, Cursor, VS Code or any MCP client, and your assistant gets three tools: <code>search_ai_act</code>, <code>read_ai_act</code> and <code>ask_actlens</code>.</p>
+<pre id="mcpcfg">{
+  "mcpServers": {
+    "actlens": { "type": "http", "url": "https://actlens.mohitshekhawat.com/mcp" }
+  }
+}</pre>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <span>Built by <a href="https://mohitshekhawat.com">Mohit Shekhawat</a> · <a href="https://github.com/itsmohitshekhawat/actlens">Source code</a></span>
+  <span>Explains the text, not legal advice. Law text: <a href="https://eur-lex.europa.eu/eli/reg/2024/1689/oj/eng">EUR-Lex</a>, © European Union.</span>
+</div></footer>
+<script src="/static/app.js"></script>
+</body>
+</html>

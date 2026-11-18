@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ActLens evaluation</title>
+<meta name="description" content="How well ActLens retrieves and cites the EU AI Act, measured on 50 questions.">
+<link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<header class="top"><div class="wrap">
+  <a class="brand" href="/">Act<b>Lens</b></a>
+  <nav><a href="/">Demo</a><a href="https://github.com/itsmohitshekhawat/actlens">GitHub</a></nav>
+</div></header>
+<main class="wrap">
+  <div class="hero">
+    <h1>Evaluation</h1>
+    <p>50 hand-written questions about the AI Act, each with the article or annex that answers it. Every change to search or to the agent is measured against this set. Scripts: <code>scripts/eval_retrieval.py</code> and <code>scripts/eval_agent.py</code>.</p>
+  </div>
+
+  <div class="card" style="margin:24px 0">
+    <h2>The agent vs one search</h2>
+    <table class="metrics" id="agent"></table>
+  </div>
+
+  <div class="card" style="margin:24px 0">
+    <h2>Search methods (no AI model)</h2>
+    <table class="metrics" id="retrieval"></table>
+    <p class="empty" style="font-size:14px;margin:14px 0 0">hit@k: share of questions with a correct article in the top k results. MRR: average of 1/rank of the first correct result. Recitals are weighted 0.7 because they explain the law but are not the law; this raised hit@1 from 0.44 to 0.66 (tuned on this same set, so treat it as optimistic).</p>
+  </div>
+
+  <div class="card" style="margin:24px 0 48px">
+    <h2>Per question (agent)</h2>
+    <table class="metrics" id="rows"></table>
+  </div>
+</main>
+<footer><div class="wrap"><span>Built by <a href="https://mohitshekhawat.com">Mohit Shekhawat</a></span><span>Not legal advice.</span></div></footer>
+<script>
+const esc = (s) => String(s).replace(/[&<>"']/g, (c) => ({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const pct = (x) => (x * 100).toFixed(0) + "%";
+const bar = (x) => `<div class="bar"><i style="width:${(x * 100).toFixed(0)}%"></i></div>`;
+fetch("/api/eval").then((r) => r.json()).then((d) => {
+  const a = d.agent.summary;
+  if (a) {
+    document.getElementById("agent").innerHTML = `
+      <tr><th>Metric</th><th>Value</th><th></th></tr>
+      <tr class="best"><td>Agent cites a correct article</td><td>${pct(a.agent_cites_correct_article)}</td><td>${bar(a.agent_cites_correct_article)}</td></tr>
+      <tr><td>One search (plain RAG) finds a correct article in its top 6</td><td>${pct(a.one_shot_search_top6)}</td><td>${bar(a.one_shot_search_top6)}</td></tr>
+      <tr><td>Answers with every citation verified</td><td>${pct(a.all_citations_verified)}</td><td>${bar(a.all_citations_verified)}</td></tr>
+      <tr><td>Average citations per answer</td><td>${a.avg_citations}</td><td></td></tr>
+      <tr><td>Average model calls per question</td><td>${a.avg_steps}</td><td></td></tr>
+      <tr><td>Median time per answer</td><td>${a.median_seconds}s</td><td></td></tr>
+      <tr><td>Average cost per answer</td><td>$${a.avg_cost_usd.toFixed(4)}</td><td></td></tr>
+      <tr><td>Model</td><td colspan="2">${esc(a.model)}</td></tr>`;
+    document.getElementById("rows").innerHTML = "<tr><th>Question</th><th>Correct</th><th>Cited correct</th><th>All verified</th><th>Steps</th><th>Cost</th></tr>" +
+      d.agent.rows.filter((r) => !r.error).map((r) => `<tr><td>${esc(r.q)}</td><td>${esc(r.gold.join(", "))}</td><td>${r.cited_gold ? "yes" : "no"}</td><td>${r.grounded ? "yes" : "<b>no</b>"}</td><td>${r.steps}</td><td>$${r.cost_usd.toFixed(4)}</td></tr>`).join("");
+  }
+  const rows = d.retrieval.retrieval || [];
+  document.getElementById("retrieval").innerHTML = "<tr><th>Method</th><th>hit@1</th><th>hit@3</th><th>hit@5</th><th>hit@10</th><th>MRR</th><th>ms/query</th></tr>" +
+    rows.map((r) => `<tr class="${r.mode === "hybrid" ? "best" : ""}"><td>${r.mode}</td><td>${r["hit@1"]}</td><td>${r["hit@3"]}</td><td>${r["hit@5"]}</td><td>${r["hit@10"]}</td><td>${r.mrr}</td><td>${r.ms_per_query}</td></tr>`).join("");
+});
+</script>
+</body>
+</html>

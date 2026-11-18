@@ -1,0 +1,7 @@
+fastapi==0.164.0
+uvicorn[standard]==0.54.0
+openai==3.55.1
+bm25s==0.3.16
+model2vec==0.10.0
+numpy==2.5.5
+fastmcp==4.2.1

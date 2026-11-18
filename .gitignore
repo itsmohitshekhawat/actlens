@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.env
+.env.*
+!.env.example
+data/index/
+.pytest_cache/
+*.sqlite
+.DS_Store
+CLAUDE.md

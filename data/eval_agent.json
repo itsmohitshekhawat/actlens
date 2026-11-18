@@ -1,0 +1,980 @@
+{
+ "summary": {
+  "questions": 50,
+  "errors": 0,
+  "agent_cites_correct_article": 1.0,
+  "one_shot_search_top6": 0.78,
+  "all_citations_verified": 0.98,
+  "avg_citations": 6.5,
+  "avg_steps": 3.62,
+  "median_seconds": 6.0,
+  "avg_cost_usd": 0.000818,
+  "total_cost_usd": 0.0409,
+  "avg_tokens": 9804,
+  "model": "deepseek/deepseek-v4.1-flash-1017"
+ },
+ "rows": [
+  {
+   "q": "Which AI practices are completely banned in the EU?",
+   "gold": [
+    "Art 5"
+   ],
+   "cited": [
+    "Art 5"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 10,
+   "steps": 3,
+   "seconds": 6.05,
+   "cost_usd": 0.000884,
+   "tokens": 7575
+  },
+  {
+   "q": "What is the maximum fine for using a prohibited AI practice?",
+   "gold": [
+    "Art 99"
+   ],
+   "cited": [
+    "Art 100",
+    "Art 99"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 5,
+   "steps": 2,
+   "seconds": 3.37,
+   "cost_usd": 0.000436,
+   "tokens": 3262
+  },
+  {
+   "q": "How does the regulation define an AI system?",
+   "gold": [
+    "Art 3"
+   ],
+   "cited": [
+    "Art 3",
+    "Recital 12"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 2,
+   "steps": 4,
+   "seconds": 5.64,
+   "cost_usd": 0.000905,
+   "tokens": 13178
+  },
+  {
+   "q": "Who counts as a deployer?",
+   "gold": [
+    "Art 3"
+   ],
+   "cited": [
+    "Art 26",
+    "Art 3",
+    "Recital 13"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 2,
+   "seconds": 6.44,
+   "cost_usd": 0.000175,
+   "tokens": 2956
+  },
+  {
+   "q": "Can my company use emotion recognition to monitor employees at work?",
+   "gold": [
+    "Art 5"
+   ],
+   "cited": [
+    "Annex III",
+    "Art 113",
+    "Art 26",
+    "Art 3",
+    "Art 5",
+    "Art 50",
+    "Recital 18",
+    "Recital 44"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 8,
+   "steps": 6,
+   "seconds": 15.37,
+   "cost_usd": 0.000712,
+   "tokens": 24238
+  },
+  {
+   "q": "Must a chatbot tell people they are talking to a machine?",
+   "gold": [
+    "Art 50"
+   ],
+   "cited": [
+    "Art 113",
+    "Art 50"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 5,
+   "steps": 4,
+   "seconds": 12.86,
+   "cost_usd": 0.000248,
+   "tokens": 11198
+  },
+  {
+   "q": "Do deepfake videos have to be labelled as artificially generated?",
+   "gold": [
+    "Art 50"
+   ],
+   "cited": [
+    "Art 50",
+    "Recital 134"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 3,
+   "seconds": 4.96,
+   "cost_usd": 0.000983,
+   "tokens": 6754
+  },
+  {
+   "q": "How do I know if my AI system is high-risk?",
+   "gold": [
+    "Art 6",
+    "Annex III"
+   ],
+   "cited": [
+    "Annex III",
+    "Art 6"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 7,
+   "steps": 4,
+   "seconds": 7.66,
+   "cost_usd": 0.000739,
+   "tokens": 12831
+  },
+  {
+   "q": "Is an AI tool that screens job applications and CVs high-risk?",
+   "gold": [
+    "Annex III"
+   ],
+   "cited": [
+    "Annex III",
+    "Art 26",
+    "Art 6",
+    "Recital 57"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 6,
+   "steps": 4,
+   "seconds": 11.22,
+   "cost_usd": 0.000254,
+   "tokens": 11528
+  },
+  {
+   "q": "Is AI-based credit scoring of people considered high-risk?",
+   "gold": [
+    "Annex III"
+   ],
+   "cited": [
+    "Annex III",
+    "Art 6",
+    "Recital 58"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 4,
+   "steps": 4,
+   "seconds": 5.42,
+   "cost_usd": 0.001151,
+   "tokens": 12791
+  },
+  {
+   "q": "What must a risk management system for a high-risk AI system include?",
+   "gold": [
+    "Art 9"
+   ],
+   "cited": [
+    "Art 72",
+    "Art 9"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": false,
+   "citations": 10,
+   "steps": 2,
+   "seconds": 5.59,
+   "cost_usd": 0.000468,
+   "tokens": 3243
+  },
+  {
+   "q": "What quality rules apply to training, validation and testing datasets?",
+   "gold": [
+    "Art 10"
+   ],
+   "cited": [
+    "Art 10"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 6,
+   "steps": 3,
+   "seconds": 5.3,
+   "cost_usd": 0.001326,
+   "tokens": 6785
+  },
+  {
+   "q": "What technical documentation must a provider of a high-risk system prepare?",
+   "gold": [
+    "Art 11",
+    "Annex IV"
+   ],
+   "cited": [
+    "Annex IV",
+    "Art 11"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 3,
+   "steps": 2,
+   "seconds": 5.37,
+   "cost_usd": 0.000545,
+   "tokens": 4219
+  },
+  {
+   "q": "Do high-risk AI systems need to record logs automatically?",
+   "gold": [
+    "Art 12"
+   ],
+   "cited": [
+    "Art 12",
+    "Art 19",
+    "Art 26"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 3,
+   "seconds": 6.43,
+   "cost_usd": 0.000445,
+   "tokens": 5482
+  },
+  {
+   "q": "What does human oversight of a high-risk AI system require?",
+   "gold": [
+    "Art 14"
+   ],
+   "cited": [
+    "Art 14",
+    "Art 26"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 6,
+   "steps": 4,
+   "seconds": 7.51,
+   "cost_usd": 0.00064,
+   "tokens": 9982
+  },
+  {
+   "q": "What are the accuracy, robustness and cybersecurity requirements?",
+   "gold": [
+    "Art 15"
+   ],
+   "cited": [
+    "Art 13",
+    "Art 15",
+    "Art 42"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 7,
+   "steps": 2,
+   "seconds": 5.2,
+   "cost_usd": 0.000707,
+   "tokens": 2970
+  },
+  {
+   "q": "List the obligations of providers of high-risk AI systems.",
+   "gold": [
+    "Art 16"
+   ],
+   "cited": [
+    "Art 16",
+    "Art 17",
+    "Art 18",
+    "Art 20",
+    "Art 21",
+    "Art 22",
+    "Art 72",
+    "Art 73",
+    "Art 8"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 17,
+   "steps": 5,
+   "seconds": 11.98,
+   "cost_usd": 0.001591,
+   "tokens": 14613
+  },
+  {
+   "q": "Does a provider need a quality management system?",
+   "gold": [
+    "Art 17"
+   ],
+   "cited": [
+    "Annex VI",
+    "Art 16",
+    "Art 17"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 7,
+   "steps": 3,
+   "seconds": 5.29,
+   "cost_usd": 0.000653,
+   "tokens": 5984
+  },
+  {
+   "q": "What do companies that use a high-risk AI system have to do?",
+   "gold": [
+    "Art 26"
+   ],
+   "cited": [
+    "Art 26",
+    "Art 27",
+    "Art 4",
+    "Art 99"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 13,
+   "steps": 5,
+   "seconds": 12.09,
+   "cost_usd": 0.001139,
+   "tokens": 19795
+  },
+  {
+   "q": "When is a fundamental rights impact assessment required?",
+   "gold": [
+    "Art 27"
+   ],
+   "cited": [
+    "Annex III",
+    "Art 27"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 4,
+   "seconds": 7.42,
+   "cost_usd": 0.00108,
+   "tokens": 10764
+  },
+  {
+   "q": "How is the conformity of a high-risk AI system assessed?",
+   "gold": [
+    "Art 43",
+    "Annex VI",
+    "Annex VII"
+   ],
+   "cited": [
+    "Annex VI",
+    "Art 43",
+    "Art 47",
+    "Art 48",
+    "Art 49"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 9,
+   "steps": 5,
+   "seconds": 10.29,
+   "cost_usd": 0.002078,
+   "tokens": 21484
+  },
+  {
+   "q": "Where must the CE marking be placed?",
+   "gold": [
+    "Art 48"
+   ],
+   "cited": [
+    "Art 48",
+    "Recital 129"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 3,
+   "seconds": 3.71,
+   "cost_usd": 0.000772,
+   "tokens": 5687
+  },
+  {
+   "q": "Must high-risk systems be registered in an EU database before going on the market?",
+   "gold": [
+    "Art 49",
+    "Art 71"
+   ],
+   "cited": [
+    "Art 26",
+    "Art 49",
+    "Art 6",
+    "Art 71"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 9,
+   "steps": 5,
+   "seconds": 8.78,
+   "cost_usd": 0.001017,
+   "tokens": 15115
+  },
+  {
+   "q": "What are the obligations of providers of general-purpose AI models like large language models?",
+   "gold": [
+    "Art 53"
+   ],
+   "cited": [
+    "Annex XI",
+    "Annex XII",
+    "Art 51",
+    "Art 53",
+    "Art 54",
+    "Art 55"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 13,
+   "steps": 4,
+   "seconds": 4.31,
+   "cost_usd": 0.001174,
+   "tokens": 11167
+  },
+  {
+   "q": "When is a general-purpose AI model considered to have systemic risk? Is there a compute threshold?",
+   "gold": [
+    "Art 51"
+   ],
+   "cited": [
+    "Art 51",
+    "Art 52"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 3,
+   "seconds": 3.24,
+   "cost_usd": 0.000728,
+   "tokens": 6605
+  },
+  {
+   "q": "What extra duties apply to general-purpose AI models with systemic risk?",
+   "gold": [
+    "Art 55"
+   ],
+   "cited": [
+    "Art 51",
+    "Art 53",
+    "Art 55"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 4,
+   "seconds": 3.58,
+   "cost_usd": 0.000919,
+   "tokens": 10627
+  },
+  {
+   "q": "What are AI regulatory sandboxes?",
+   "gold": [
+    "Art 57"
+   ],
+   "cited": [
+    "Art 3",
+    "Art 57"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 9,
+   "steps": 3,
+   "seconds": 5.82,
+   "cost_usd": 0.000708,
+   "tokens": 7717
+  },
+  {
+   "q": "Can a high-risk AI system be tested in real-world conditions outside a sandbox?",
+   "gold": [
+    "Art 60"
+   ],
+   "cited": [
+    "Art 60",
+    "Art 76"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 3,
+   "seconds": 5.98,
+   "cost_usd": 0.001061,
+   "tokens": 6894
+  },
+  {
+   "q": "Do companies need to train their staff on AI?",
+   "gold": [
+    "Art 4"
+   ],
+   "cited": [
+    "Art 26",
+    "Art 4",
+    "Recital 20"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 4,
+   "steps": 3,
+   "seconds": 7.07,
+   "cost_usd": 0.000742,
+   "tokens": 8577
+  },
+  {
+   "q": "When does the AI Act start to apply?",
+   "gold": [
+    "Art 113"
+   ],
+   "cited": [
+    "Art 111",
+    "Art 113"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 3,
+   "steps": 3,
+   "seconds": 4.98,
+   "cost_usd": 0.000506,
+   "tokens": 5404
+  },
+  {
+   "q": "Does the AI Act cover AI used for military or defence purposes?",
+   "gold": [
+    "Art 2"
+   ],
+   "cited": [
+    "Art 2",
+    "Recital 24"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 2,
+   "steps": 4,
+   "seconds": 7.04,
+   "cost_usd": 0.000943,
+   "tokens": 11054
+  },
+  {
+   "q": "Is AI developed only for scientific research exempt?",
+   "gold": [
+    "Art 2"
+   ],
+   "cited": [
+    "Art 2",
+    "Recital 25"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 3,
+   "steps": 4,
+   "seconds": 7.24,
+   "cost_usd": 0.000826,
+   "tokens": 10375
+  },
+  {
+   "q": "Can police use live facial recognition in public spaces?",
+   "gold": [
+    "Art 5"
+   ],
+   "cited": [
+    "Art 5"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 8,
+   "steps": 4,
+   "seconds": 7.13,
+   "cost_usd": 0.000814,
+   "tokens": 11976
+  },
+  {
+   "q": "Is social scoring by AI allowed?",
+   "gold": [
+    "Art 5"
+   ],
+   "cited": [
+    "Art 100",
+    "Art 5",
+    "Art 99",
+    "Recital 31"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 7,
+   "steps": 4,
+   "seconds": 2.66,
+   "cost_usd": 0.000928,
+   "tokens": 11303
+  },
+  {
+   "q": "What is the AI Office?",
+   "gold": [
+    "Art 64"
+   ],
+   "cited": [
+    "Art 112",
+    "Art 3",
+    "Art 56",
+    "Art 64",
+    "Art 65",
+    "Art 75",
+    "Art 88",
+    "Art 90",
+    "Recital 148"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 10,
+   "steps": 6,
+   "seconds": 6.0,
+   "cost_usd": 0.000693,
+   "tokens": 16706
+  },
+  {
+   "q": "How is the European Artificial Intelligence Board composed?",
+   "gold": [
+    "Art 65"
+   ],
+   "cited": [
+    "Art 65"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 6,
+   "steps": 3,
+   "seconds": 15.02,
+   "cost_usd": 0.000726,
+   "tokens": 5624
+  },
+  {
+   "q": "What must a provider do when a serious incident happens?",
+   "gold": [
+    "Art 73"
+   ],
+   "cited": [
+    "Art 26",
+    "Art 3",
+    "Art 73"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 8,
+   "steps": 3,
+   "seconds": 2.81,
+   "cost_usd": 0.000818,
+   "tokens": 7233
+  },
+  {
+   "q": "Do people have a right to an explanation of a decision made with a high-risk AI system?",
+   "gold": [
+    "Art 86"
+   ],
+   "cited": [
+    "Annex III",
+    "Art 26",
+    "Art 86"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 4,
+   "steps": 3,
+   "seconds": 4.61,
+   "cost_usd": 0.000511,
+   "tokens": 6861
+  },
+  {
+   "q": "Where can I complain if I think an AI system breaks the rules?",
+   "gold": [
+    "Art 85"
+   ],
+   "cited": [
+    "Art 70",
+    "Art 74",
+    "Art 75",
+    "Art 77",
+    "Art 85",
+    "Art 87"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 8,
+   "steps": 3,
+   "seconds": 6.89,
+   "cost_usd": 0.00068,
+   "tokens": 7401
+  },
+  {
+   "q": "Are fines lower for start-ups and small companies?",
+   "gold": [
+    "Art 99"
+   ],
+   "cited": [
+    "Art 101",
+    "Art 62",
+    "Art 99"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 6,
+   "steps": 4,
+   "seconds": 7.93,
+   "cost_usd": 0.001651,
+   "tokens": 12521
+  },
+  {
+   "q": "What are codes of practice for general-purpose AI?",
+   "gold": [
+    "Art 56"
+   ],
+   "cited": [
+    "Art 53",
+    "Art 55",
+    "Art 56"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 8,
+   "steps": 3,
+   "seconds": 6.47,
+   "cost_usd": 0.000472,
+   "tokens": 6097
+  },
+  {
+   "q": "What fines can the Commission impose on providers of general-purpose AI models?",
+   "gold": [
+    "Art 101"
+   ],
+   "cited": [
+    "Art 101",
+    "Art 93"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 6,
+   "seconds": 7.41,
+   "cost_usd": 0.0008,
+   "tokens": 18281
+  },
+  {
+   "q": "Does a company outside the EU need a representative in the EU?",
+   "gold": [
+    "Art 22",
+    "Art 54"
+   ],
+   "cited": [
+    "Art 2",
+    "Art 22",
+    "Art 23",
+    "Art 3",
+    "Art 54"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": false,
+   "grounded": true,
+   "citations": 8,
+   "steps": 4,
+   "seconds": 4.46,
+   "cost_usd": 0.001088,
+   "tokens": 10747
+  },
+  {
+   "q": "What must importers check before placing a high-risk AI system on the market?",
+   "gold": [
+    "Art 23"
+   ],
+   "cited": [
+    "Art 23"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 3,
+   "seconds": 3.31,
+   "cost_usd": 0.000888,
+   "tokens": 6027
+  },
+  {
+   "q": "Can an AI system listed in Annex III be not high-risk if it only does a narrow procedural task?",
+   "gold": [
+    "Art 6"
+   ],
+   "cited": [
+    "Art 6",
+    "Art 80"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 6,
+   "steps": 2,
+   "seconds": 4.78,
+   "cost_usd": 0.000548,
+   "tokens": 3561
+  },
+  {
+   "q": "Are open-source AI models exempt from the obligations?",
+   "gold": [
+    "Art 53",
+    "Art 2"
+   ],
+   "cited": [
+    "Art 2",
+    "Art 25",
+    "Art 53",
+    "Art 54",
+    "Art 55"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 7,
+   "steps": 4,
+   "seconds": 8.88,
+   "cost_usd": 0.000664,
+   "tokens": 11354
+  },
+  {
+   "q": "What post-market monitoring is required after deployment?",
+   "gold": [
+    "Art 72"
+   ],
+   "cited": [
+    "Art 26",
+    "Art 3",
+    "Art 72"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 6,
+   "steps": 5,
+   "seconds": 12.86,
+   "cost_usd": 0.000472,
+   "tokens": 15593
+  },
+  {
+   "q": "What information must instructions for use give to deployers?",
+   "gold": [
+    "Art 13"
+   ],
+   "cited": [
+    "Art 13",
+    "Art 15"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 9,
+   "steps": 3,
+   "seconds": 5.7,
+   "cost_usd": 0.001015,
+   "tokens": 5972
+  },
+  {
+   "q": "Is it allowed to use biometrics to infer someone's race or political opinions?",
+   "gold": [
+    "Art 5"
+   ],
+   "cited": [
+    "Annex III",
+    "Art 5",
+    "Art 50",
+    "Recital 30"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 5,
+   "steps": 3,
+   "seconds": 3.47,
+   "cost_usd": 0.00073,
+   "tokens": 6631
+  },
+  {
+   "q": "Can AI predict whether a person will commit a crime based on profiling?",
+   "gold": [
+    "Art 5"
+   ],
+   "cited": [
+    "Art 3",
+    "Art 5",
+    "Recital 42"
+   ],
+   "cited_gold": true,
+   "one_shot_hit": true,
+   "grounded": true,
+   "citations": 3,
+   "steps": 5,
+   "seconds": 10.9,
+   "cost_usd": 0.000837,
+   "tokens": 15452
+  }
+ ]
+}

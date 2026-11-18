@@ -1,0 +1,393 @@
+{
+ "questions": 50,
+ "retrieval": [
+  {
+   "mode": "keyword",
+   "hit@1": 0.56,
+   "hit@3": 0.7,
+   "hit@5": 0.84,
+   "hit@10": 0.9,
+   "mrr": 0.655,
+   "ms_per_query": 0.13,
+   "misses_at_5": [
+    {
+     "q": "What is the maximum fine for using a prohibited AI practice?",
+     "gold": [
+      "Art 99"
+     ],
+     "got": [
+      "Art 5",
+      "Art 26",
+      "Art 101",
+      "Art 56",
+      "Art 56"
+     ]
+    },
+    {
+     "q": "Can my company use emotion recognition to monitor employees at work?",
+     "gold": [
+      "Art 5"
+     ],
+     "got": [
+      "Art 3",
+      "Art 50",
+      "Annex III",
+      "Annex III",
+      "Art 50"
+     ]
+    },
+    {
+     "q": "Must a chatbot tell people they are talking to a machine?",
+     "gold": [
+      "Art 50"
+     ],
+     "got": [
+      "Art 14",
+      "Art 3",
+      "Art 48",
+      "Art 71",
+      "Art 47"
+     ]
+    },
+    {
+     "q": "List the obligations of providers of high-risk AI systems.",
+     "gold": [
+      "Art 16"
+     ],
+     "got": [
+      "Art 26",
+      "Art 22",
+      "Art 6",
+      "Art 17",
+      "Art 26"
+     ]
+    },
+    {
+     "q": "What do companies that use a high-risk AI system have to do?",
+     "gold": [
+      "Art 26"
+     ],
+     "got": [
+      "Art 24",
+      "Art 23",
+      "Art 63",
+      "Art 41",
+      "Art 55"
+     ]
+    },
+    {
+     "q": "When does the AI Act start to apply?",
+     "gold": [
+      "Art 113"
+     ],
+     "got": [
+      "Art 2",
+      "Art 62",
+      "Art 2",
+      "Art 95",
+      "Art 37"
+     ]
+    },
+    {
+     "q": "Where can I complain if I think an AI system breaks the rules?",
+     "gold": [
+      "Art 85"
+     ],
+     "got": [
+      "Art 23",
+      "Annex IV",
+      "Art 6",
+      "Art 26",
+      "Art 6"
+     ]
+    },
+    {
+     "q": "Does a company outside the EU need a representative in the EU?",
+     "gold": [
+      "Art 22",
+      "Art 54"
+     ],
+     "got": [
+      "Art 71",
+      "Art 61",
+      "Annex V",
+      "Art 83",
+      "Art 2"
+     ]
+    }
+   ]
+  },
+  {
+   "mode": "semantic",
+   "hit@1": 0.54,
+   "hit@3": 0.72,
+   "hit@5": 0.82,
+   "hit@10": 0.86,
+   "mrr": 0.655,
+   "ms_per_query": 0.12,
+   "misses_at_5": [
+    {
+     "q": "What is the maximum fine for using a prohibited AI practice?",
+     "gold": [
+      "Art 99"
+     ],
+     "got": [
+      "Art 5",
+      "Art 14",
+      "Art 6",
+      "Art 6",
+      "Art 60"
+     ]
+    },
+    {
+     "q": "Can my company use emotion recognition to monitor employees at work?",
+     "gold": [
+      "Art 5"
+     ],
+     "got": [
+      "Art 3",
+      "Annex III",
+      "Art 3",
+      "Art 72",
+      "Art 89"
+     ]
+    },
+    {
+     "q": "Is AI-based credit scoring of people considered high-risk?",
+     "gold": [
+      "Annex III"
+     ],
+     "got": [
+      "Art 6",
+      "Art 6",
+      "Art 80",
+      "Art 9",
+      "Art 12"
+     ]
+    },
+    {
+     "q": "List the obligations of providers of high-risk AI systems.",
+     "gold": [
+      "Art 16"
+     ],
+     "got": [
+      "Art 22",
+      "Art 26",
+      "Art 26",
+      "Art 22",
+      "Art 17"
+     ]
+    },
+    {
+     "q": "When does the AI Act start to apply?",
+     "gold": [
+      "Art 113"
+     ],
+     "got": [
+      "Art 2",
+      "Art 2",
+      "Art 3",
+      "Art 6",
+      "Art 79"
+     ]
+    },
+    {
+     "q": "Is social scoring by AI allowed?",
+     "gold": [
+      "Art 5"
+     ],
+     "got": [
+      "Art 6",
+      "Art 6",
+      "Art 3",
+      "Art 3",
+      "Art 64"
+     ]
+    },
+    {
+     "q": "Where can I complain if I think an AI system breaks the rules?",
+     "gold": [
+      "Art 85"
+     ],
+     "got": [
+      "Art 14",
+      "Art 1",
+      "Art 60",
+      "Art 2",
+      "Art 79"
+     ]
+    },
+    {
+     "q": "Does a company outside the EU need a representative in the EU?",
+     "gold": [
+      "Art 22",
+      "Art 54"
+     ],
+     "got": [
+      "Annex X",
+      "Annex I",
+      "Art 110",
+      "Annex X",
+      "Annex I"
+     ]
+    },
+    {
+     "q": "What must importers check before placing a high-risk AI system on the market?",
+     "gold": [
+      "Art 23"
+     ],
+     "got": [
+      "Art 14",
+      "Art 60",
+      "Art 20",
+      "Art 25",
+      "Art 24"
+     ]
+    }
+   ]
+  },
+  {
+   "mode": "hybrid",
+   "hit@1": 0.66,
+   "hit@3": 0.78,
+   "hit@5": 0.8,
+   "hit@10": 0.82,
+   "mrr": 0.712,
+   "ms_per_query": 0.17,
+   "misses_at_5": [
+    {
+     "q": "What is the maximum fine for using a prohibited AI practice?",
+     "gold": [
+      "Art 99"
+     ],
+     "got": [
+      "Art 5",
+      "Art 101",
+      "Art 56",
+      "Art 56",
+      "Art 101"
+     ]
+    },
+    {
+     "q": "Can my company use emotion recognition to monitor employees at work?",
+     "gold": [
+      "Art 5"
+     ],
+     "got": [
+      "Art 3",
+      "Annex III",
+      "Art 50",
+      "Art 3",
+      "Art 89"
+     ]
+    },
+    {
+     "q": "Must a chatbot tell people they are talking to a machine?",
+     "gold": [
+      "Art 50"
+     ],
+     "got": [
+      "Art 14",
+      "Recital 119",
+      "Recital 29",
+      "Recital 12",
+      "Recital 27"
+     ]
+    },
+    {
+     "q": "How do I know if my AI system is high-risk?",
+     "gold": [
+      "Art 6",
+      "Annex III"
+     ],
+     "got": [
+      "Art 14",
+      "Art 9",
+      "Art 12",
+      "Art 25",
+      "Art 20"
+     ]
+    },
+    {
+     "q": "Is AI-based credit scoring of people considered high-risk?",
+     "gold": [
+      "Annex III"
+     ],
+     "got": [
+      "Art 6",
+      "Art 6",
+      "Art 80",
+      "Art 9",
+      "Art 25"
+     ]
+    },
+    {
+     "q": "List the obligations of providers of high-risk AI systems.",
+     "gold": [
+      "Art 16"
+     ],
+     "got": [
+      "Art 22",
+      "Art 26",
+      "Art 26",
+      "Art 17",
+      "Art 22"
+     ]
+    },
+    {
+     "q": "When does the AI Act start to apply?",
+     "gold": [
+      "Art 113"
+     ],
+     "got": [
+      "Art 2",
+      "Art 2",
+      "Art 80",
+      "Art 25",
+      "Art 6"
+     ]
+    },
+    {
+     "q": "Is social scoring by AI allowed?",
+     "gold": [
+      "Art 5"
+     ],
+     "got": [
+      "Art 6",
+      "Art 6",
+      "Art 3",
+      "Art 3",
+      "Art 4"
+     ]
+    },
+    {
+     "q": "Where can I complain if I think an AI system breaks the rules?",
+     "gold": [
+      "Art 85"
+     ],
+     "got": [
+      "Art 1",
+      "Art 6",
+      "Art 6",
+      "Recital 26",
+      "Recital 12"
+     ]
+    },
+    {
+     "q": "Does a company outside the EU need a representative in the EU?",
+     "gold": [
+      "Art 22",
+      "Art 54"
+     ],
+     "got": [
+      "Annex I",
+      "Art 110",
+      "Art 71",
+      "Annex X",
+      "Annex X"
+     ]
+    }
+   ]
+  }
+ ]
+}
