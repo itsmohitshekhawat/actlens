@@ -88,3 +88,5 @@ table.metrics tr.best td { font-weight: 600; }
 .bar i { display: block; height: 100%; background: var(--accent); }
 footer { border-top: 1px solid var(--line); padding: 24px 0 40px; color: var(--muted); font-size: 13.5px; }
 footer .wrap { display: flex; flex-wrap: wrap; gap: 8px 22px; justify-content: space-between; }
+.gh { display: inline-flex; align-items: center; gap: 6px; }
+.gh svg { flex: none; }
